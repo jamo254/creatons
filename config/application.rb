@@ -23,5 +23,10 @@ module Creatons
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+  # Add support for UUID as a primary key type
+  config.generators do |g|
+    g.orm :active_record, primary_key_type: :uuid
+  end
   end
 end
